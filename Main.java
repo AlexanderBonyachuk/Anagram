@@ -8,8 +8,8 @@ public class Main {
         System.out.println("Ведите 2 слова через пробел: ");
         boolean rezalt = false;
         Scanner scanner = new Scanner(System.in);
-        StringBuilder word1 = new StringBuilder(scanner.next().toLowerCase());
-        StringBuilder word2 = new StringBuilder(scanner.next().toLowerCase());
+        String word1 = scanner.next().toLowerCase();
+        String word2 = scanner.next().toLowerCase();
         scanner.close();
 
         rezalt = analyzer(word1).equals(analyzer(word2));
@@ -17,7 +17,7 @@ public class Main {
         System.out.println(rezalt);
     }
 
-     static Map<Character, Integer> analyzer(StringBuilder word) {
+     static Map<Character, Integer> analyzer(String word) {
         Map<Character, Integer> map = new HashMap<>();
         for (int i = 0; i < word.length(); i++) {
             int numChar = 1;
