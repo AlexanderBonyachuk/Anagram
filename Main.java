@@ -18,10 +18,8 @@ public class Main {
         for (int i = 0; i < word.length(); i++) {
             int numChar = 1;
             char charW = word.charAt(i);
-            if (!map.isEmpty()) {
-                if (map.containsKey(charW)) {
-                    numChar += map.get(charW);
-                }
+            if (map.containsKey(charW)) {
+                numChar += map.get(charW);
             }
             map.put(charW, numChar);
         }
